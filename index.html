@@ -1,0 +1,330 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Clothes-R-Us</title>
+    <meta charset="utf-8" />
+
+    <meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCwZhDu9-k2PPpnT9fH6HD8aijCgfyPSvg"></script>
+    
+    <link href="style/jquery.mobile-1.4.5.min.css" rel="stylesheet" />
+    <link href="style/MyStSh.css" rel="stylesheet" />
+    <link href="style/StSh.css" rel="stylesheet" />
+    <link href="style/sst.css" rel="stylesheet" />
+
+    <script src="scripts/jquery-3.1.1.min.js"></script>
+    <script src="scripts/jquery-migrate-3.0.0.min.js"></script>
+    <script src="scripts/jquery.mobile-1.4.5.min.js"></script>
+    <script src="scripts/jquery.validate.min.js"></script>
+    <script src="scripts/jquery.validate-vsdoc.js"></script>
+    <script src="scripts/jquery.validate.js"></script>
+    <script src="scripts/bootstrap.min.js"></script>
+
+    <script src="scripts/Globals.js"></script>
+    <script src="scripts/WOMENS.js"></script>
+    <script src="scripts/MENS.js"></script>
+    <script src="scripts/item.js"></script>
+    <script src="scripts/pay.js"></script>
+    <script src="scripts/confirm.js"></script>
+    <script src="scripts/map.js"></script>
+   
+
+    <style> 
+    </style>
+
+    <script type="text/javascript"> 
+    </script>
+   
+
+   </head>
+<body>
+    <!--the Welcome page-->
+    <div data-role="page" id="WelcomePage" style="background-color:linen">
+        <div data-role="header" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#WelcomePage" class="ui-btn-active ui-state-persist" data-icon="home" data-theme="e">Home</a></li>
+                    <li><a href="#WOMENSPage"  data-icon="shop" data-theme="e">WOMENS</a></li>
+                    <li><a href="#MENSPage"  data-icon="shop" data-theme="e">MENS</a></li>
+                    <li><a href="#PayPage"  data-icon="check"data-theme="e">Pay</a></li>
+                    <li><a href="#MapPage"  data-icon="location" data-theme="e">Map page</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content" class="ui-content" style="text-align:center;">
+
+            <h2 style="color:darkmagenta">Welcome to Clothes-R-Us Mobile!</h2>
+            <p style="font-weight:bold">here you can search for the closest shop to your location,<br>look for interesting items and much more  </p>
+            <p >  <img src="pics/home.jpg" style="height:365px;width:328px;margin-top:1px;" /> </p>
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h5>Clothes-R-Us &nbsp &copy; &nbsp  Shlomi Biton & Tal Peperovits </h5>
+        </div>
+    </div>
+
+    <!--the WOMENS page-->
+    <div data-role="page" id="WOMENSPage" data-theme="a" style="background-color:linen">
+        <div data-role="header" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#WelcomePage" data-icon="home" data-theme="e">Home</a></li>
+                    <li><a href="#WOMENSPage" class="ui-btn-active ui-state-persist" data-icon="shop" data-theme="e">WOMENS</a></li>
+                    <li><a href="#MENSPage" data-icon="shop" data-theme="e">MENS</a></li>
+                    <li><a href="#PayPage" data-icon="check" data-theme="e">Pay</a></li>
+                    <li><a href="#MapPage" data-icon="location" data-theme="e">Map page</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content" class="ui-content" style="text-align:center;">
+            <h2 style="color:darkmagenta;font-style:italic">New Items</h2>
+            <ul id="WNIS" data-role="listview">
+              
+            </ul>
+            <br />
+            <h2 style="color:darkmagenta;font-style:italic">Hot Items</h2>
+            <ul id="WHIS" data-role="listview">
+                
+            </ul>
+
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h5>Clothes-R-Us &nbsp &copy; &nbsp  Shlomi Biton & Tal Peperovits </h5>
+        </div>
+    </div>
+
+    <!--the MENS page-->
+    <div data-role="page" id="MENSPage" data-theme="a" style="background-color:linen">
+        <div data-role="header" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#WelcomePage" data-icon="home" data-theme="e">Home</a></li>
+                    <li><a href="#WOMENSPage" data-icon="shop" data-theme="e">WOMENS</a></li>
+                    <li><a href="#MENSPage" class="ui-btn-active ui-state-persist" data-icon="shop" data-theme="e">MENS</a></li>
+                    <li><a href="#PayPage" data-icon="check" data-theme="e">Pay</a></li>
+                    <li><a href="#MapPage" data-icon="location" data-theme="e">Map page</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content" class="ui-content" style="text-align:center;">
+
+            <h2 style="color:darkmagenta;font-style:italic">New Items</h2>
+            <ul id="MNIS" data-role="listview">
+               
+            </ul>
+            <br />
+            <h2 style="color:darkmagenta;font-style:italic">Hot Items</h2>
+            <ul id="MHIS" data-role="listview">
+                
+            </ul>
+
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h5>Clothes-R-Us &nbsp &copy; &nbsp  Shlomi Biton & Tal Peperovits </h5>
+        </div>
+    </div>
+
+    <!--the Item page-->
+    <div data-role="page" id="ItemPage" style="background-color:linen">
+        <div data-role="header" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#WelcomePage" data-icon="home" data-theme="e">Home</a></li>
+                    <li><a href="#WOMENSPage" data-icon="shop" data-theme="e">WOMENS</a></li>
+                    <li><a href="#MENSPage" data-icon="shop" data-theme="e">MENS</a></li>
+                    <li><a href="#PayPage" class="ui-btn-active ui-state-persist" data-icon="check" data-theme="e">Pay</a></li>
+                    <li><a href="#MapPage" data-icon="location" data-theme="e">Map page</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content" class="ui-content" style="text-align:center;">
+
+            <h2 style="color:darkmagenta;font-style:italic">Item:&nbsp<span id="itn"></span></h2>
+            <div id="pic"></div>
+            <h2 style="color:darkmagenta">Price:&nbsp<span id="pri"></span></h2>
+
+            <a href="#" id="Add" data-role="button" data-mini="true" data-inline="true" data-icon="plus" data-iconpos="notext"
+               style="margin:0px;padding:0px;margin-bottom:20px;font-weight:bold;background-color:darkgray">add</a>
+            <a href="#" id="Remove" data-role="button" data-mini="true" data-inline="true" data-icon="minus" data-iconpos="notext"
+               style="margin:0px;padding:0px;margin-bottom:20px;font-weight:bold;background-color:darkgray">Remove</a>
+
+            <div style="text-align:center">
+                <h3><span style="font-style:italic">Amount: </span><span id="Amount" style="font-style:italic">0</span><br /></h3>
+            </div>
+            <div style="text-align:center;font-style:italic">
+                <span>_____________</span><br />
+                <h3><span>Total Price: </span><span id="TotalPrice">0</span>$<br /></h3>
+                <fieldset data-role="controlgroup" data-type="horizontal" >
+                    <a href="#" id="backBtn" data-role="button" data-rel="back" data-inline="true" data-icon="back" style="background-color:lightseagreen;font-weight:bold">Back</a>
+                    <a href="#" id="addBtn" data-role="button" data-rel="" data-inline="true" data-icon="shop" style="background-color:lightseagreen;font-weight:bold">AddToCart</a>
+                    <a href="#PayPage" id="payBtn" data-role="button" data-inline="true" data-icon="check" style="background-color:lightseagreen;font-weight:bold">PAY</a>
+                    </fieldset>
+        </div>
+
+        </div>
+
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h5>Clothes-R-Us &nbsp &copy; &nbsp  Shlomi Biton & Tal Peperovits </h5>
+        </div>
+    </div>
+
+
+    <!--the Pay page-->
+    <div data-role="page" id="PayPage" data-theme="a" style="background-color:linen">
+        <div data-role="header" data-position="fixed">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#WelcomePage" data-icon="home" data-theme="e">Home</a></li>
+                    <li><a href="#WOMENSPage" data-icon="shop" data-theme="e">WOMENS</a></li>
+                    <li><a href="#MENSPage" data-icon="shop" data-theme="e">MENS</a></li>
+                    <li><a href="#PayPage" class="ui-btn-active ui-state-persist" data-icon="check" data-theme="e">Pay</a></li>
+                    <li><a href="#MapPage" data-icon="location" data-theme="e">Map page</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content" class="ui-content" style="text-align:center;">
+
+            <fieldset data-role="fieldcontain" style="border:1px solid black;padding:5px;">
+                <h3 style="color:purple;font-style:italic">
+                    You have selected the following Items:&nbsp<span id="Itl"></span><br />
+                    The Total amount to pay:<span id="tp"></span>$
+                </h3>
+            </fieldset> <br />
+            <form class="cmxform" id="signupForm" method="get" action="">
+                <fieldset data-role="fieldcontain" style="border:1px solid black;padding:9px;text-align:left;">
+                    <legend style="font-weight:bold">Fill Details</legend>
+                    <p>
+                        <label for="FirstName" style="font-weight:bold">First Name:</label>
+                        <input style="background-color:black;color:white" type="text" id="fname" name="fname" placeholder="" />
+                    </p>
+                    <p>
+                        <label for="lastname" style="font-weight:bold">Last Name:</label>
+                        <input style="background-color:black;color:white" type="text" id="lname" name="lname" placeholder="" />
+                    </p>
+                    <p>
+                        <label for="Phone" style="font-weight:bold">Phone:</label>
+                        <input style="background-color:black;color:white" type="text" id="phone" name="phone" placeholder="" />
+                    </p>
+                    <p>
+                        <label for="street" style="font-weight:bold">Street:</label>
+                        <input style="background-color:black;color:white" type="text" id="street" name="street" placeholder="" />
+                    </p>
+                    <p>
+                        <label for="city" style="font-weight:bold">City:</label>
+                        <input style="background-color:black;color:white" type="text" id="city" name="city" placeholder="" />
+                    </p>
+                    <p>
+                        <label for="address" style="font-weight:bold">Zip Code:</label>
+                        <input style="background-color:black;color:white" type="text" id="zip" name="zip" placeholder="" />
+                    </p>
+                    <p>
+                        <label for="email" style="font-weight:bold">Email:</label>
+                        <input style="background-color:black;color:white" type="email" id="email" name="email" placeholder="" />
+                    </p>
+                    <p>
+                        <label for="Card Type" style="text-align:center;font-weight:bold">Select Card Type:</label>
+                        <select data-theme="b" id="cct" name="cct">
+                            <option style="background-color:darkgray;color:white" value="Leumi Card">Leumi Card</option>
+                            <option style="background-color:darkgray;color:white" value="Visa">Visa</option>    
+                            <option style="background-color:darkgray;color:white" value="Master Card">Master Card</option>
+                            <option style="background-color:darkgray;color:white" value="American Express">American Express</option>
+                        </select>
+                    </p>
+                    <p>
+                        <label for="ccn" style="text-align:center;font-weight:bold">Credit Card Number:</label>
+                        <input style="background-color:black;color:white" type="text" id="ccn" name="ccn" placeholder="" />
+                    </p>  
+                    <p>
+                       <center> <button href="" id="orderBtn"  class="submit" type="submit" style="background-color:darkred;color:white" data-role="button" data-inline="true" data-icon="check">SAVE ORDER</button></center>
+                    </p>
+                </fieldset>
+            </form>
+           
+            
+        </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h5>Clothes-R-Us &nbsp &copy; &nbsp  Shlomi Biton & Tal Peperovits </h5>
+        </div>
+    </div>
+
+    <!--the Map page-->
+    <div data-role="page" id="MapPage" data-theme="a" style="background-color:linen">
+        <div data-role="header">
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#WelcomePage" data-icon="home" data-theme="e">Home</a></li>
+                    <li><a href="#WOMENSPage" data-icon="shop" data-theme="e">WOMENS</a></li>
+                    <li><a href="#MENSPage" data-icon="shop" data-theme="e">MENS</a></li>
+                    <li><a href="#PayPage" data-icon="check" data-theme="e">Pay</a></li>
+                    <li><a href="#MapPage" class="ui-btn-active ui-state-persist" data-icon="location" data-theme="e">Map page</a></li>
+                </ul>
+            </div>
+        </div>
+        <div data-role="content" style="text-align:center;">
+                <fieldset data-role="fieldcontain" style="border:1px solid black;padding:7px;" >
+                    <h2 style="color:purple;font-style:italic;text-decoration:underline">
+                        View Shop Locations
+                    </h2>
+                    <div style="text-align:center;font-style:italic;font-weight:bold">
+
+                        <select data-theme="b" id="shopl" name="shopl" data-mini="true">
+                            <option style="background-color:darkgray;color:white" value="Shops">Select Shop</option>
+                            <option style="background-color:darkgray;color:white" value="0">CRSAzrieliMall Tel-Aviv</option>
+                            <option style="background-color:darkgray;color:white" value="1">CRSBigPoleg Netanya</option>
+                            <option style="background-color:darkgray;color:white" value="2">CRSGrandCanyon Haifa</option>
+                            <option style="background-color:darkgray;color:white" value="3">CRSMallHayam Eilat</option>
+                            <option style="background-color:darkgray;color:white" value="4">CRSBigPH Pardes-Hanna</option>
+                            <option style="background-color:darkgray;color:white" value="5">CRSBigBS Beer-Sheba</option>
+                            <option style="background-color:darkgray;color:white" value="6">CRSBigKS Kiryat-Shoma</option>
+                            <option style="background-color:darkgray;color:white" value="7">CRSMalhaMall Jerusalem</option>
+                            <option style="background-color:darkgray;color:white" value="8">CRSHazahavMall Rishon-LeTsiyon</option>
+                            <option style="background-color:darkgray;color:white" value="9">CRSBigFashion Tiberias</option>
+                        </select>
+                    </div>
+                  
+                </fieldset> <br />
+          
+       
+                <div id="mapholder"></div>
+            <fieldset data-role="controlgroup" data-mini="true" data-type="">
+                <button id="getPosition" style="background-color:lightseagreen" data-icon="location" data-inline="true">Get Position</button>
+                <button id="watchPosition" style="background-color:lightseagreen" data-icon="location" data-inline="true">Get Position while moving</button>
+                <button id="watchPositionStop" style="background-color:lightseagreen" data-icon="location" data-inline="true">STOP-Get Position while moving</button>
+            </fieldset>
+
+    </div>
+        <div data-role="footer" data-position="fixed" data-theme="b">
+            <h5>Clothes-R-Us &nbsp &copy; &nbsp  Shlomi Biton & Tal Peperovits</h5>
+        </div>
+    </div>
+
+    <!--Confirm page-->
+    <div data-role="page" id="ConfirmPage" data-theme="">
+        <div data-role="header" data-theme="e">
+            <h1>Clothes-R-Us</h1>
+        </div>
+        <div id="ConfirmPage" data-role="content" style="color:darkmagenta;font-weight:bold;background-color:linen">
+            <center><p>Your Order is Confirmed!<br /> Thanks for buying Clothes-R-Us!</p></center>
+        </div>
+        <div data-role="footer" class="ui-bar" data-position="fixed" data-theme="e">
+            <h5>Clothes-R-Us &nbsp &copy; &nbsp  Shlomi Biton & Tal Peperovits </h5>
+        </div>
+    </div>
+
+
+    <!-- photo Page  -->
+    <div id="photo" data-role="page" data-theme="">
+        <header data-role="header" data-theme="e">
+            <h1 style="font-style:italic;font-weight:bold;">Item</h1>
+        </header>
+        <section data-role="content">
+            <img id="photoPlaceHolder" src="" alt="" />
+        </section>
+        <footer data-role="footer" data-position="fixed" data-theme="e">
+            <h5>Clothes-R-Us &nbsp &copy; &nbsp  Shlomi Biton & Tal Peperovits </h5>
+        </footer>
+    </div>
+
+</body>
+</html>

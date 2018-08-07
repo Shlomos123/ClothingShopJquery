@@ -1,0 +1,68 @@
+﻿body {
+}
+
+
+.b1
+{
+    border:2px solid yellow;
+    font-size:50px;
+    }
+
+.t1
+{
+    border:1px solid black;
+    height:30px;
+    padding-top:20px;
+    }
+
+.media img+span.badge {
+    position: relative;
+    top: -8px;
+    left: 8px;
+}
+
+.item {
+    position:relative;
+    padding-top:20px;
+    display:inline-block;
+}
+.notify-badge{
+    position: absolute;
+    right:-20px;
+    top:10px;
+    background:deeppink;
+    text-align: center;
+    border-radius: 30px 30px 30px 30px;
+    color:white;
+    padding:5px 10px;
+    font-size:20px;
+}
+input {
+    margin:10px;
+}
+
+#LatValue, #LongValue{
+    display:inline-block;
+    width:40px;
+    font-weight:bold;
+    font-size:large;
+}
+#mapholder 
+{
+    height:520px;
+    margin:1px;
+    border:1px solid darkgrey;
+    border-radius:5px;
+}
+
+.default
+{
+  cursor: default;
+}
+.pointer 
+{
+  cursor: pointer;
+}
+
+ 
+

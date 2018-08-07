@@ -1,0 +1,47 @@
+﻿body {
+}
+
+ .error{
+	display: none;
+	margin-left: 10px;
+}		
+
+.error_show{
+	color: red;
+	margin-left: 10px;
+}
+input.invalid, textarea.invalid{
+	border: 2px solid red;
+}
+
+input.valid, textarea.valid{
+	border: 2px solid green;
+}
+
+label.error 
+{
+   float: none; color: red; 
+   padding-left: .5em;
+   vertical-align: top; 
+   display: block;
+}
+
+ #signupForm label.error {
+                margin-left: 10px;
+                width: auto;
+                display: inline;
+            }
+
+#photoPlaceHolder
+{
+    display: block;
+    margin:0 auto;
+    width:100%;
+}
+
+#photo section
+{
+    background:linen;
+}
+
+
